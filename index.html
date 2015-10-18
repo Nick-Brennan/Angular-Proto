@@ -75,47 +75,31 @@
                     </tr>
                 </theader>
                 <tr>
-                    <td >{{plan.monData | number:2}}</td>
-                    <td >{{plan.tuesData | number:2}}</td>
-                    <td >{{plan.wedData | number:2}}</td>
-                    <td >{{plan.thursData | number:2}}</td>
-                    <td >{{plan.friData | number:2}}</td>
-                    <td >{{plan.satData | number:2}}</td>
-                    <td >{{plan.sunData | number:2}}</td>
+                    <td ><a ng-href='{{plan.monUrl}}' target="_blank">{{plan.monData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.tuesUrl}}' target="_blank">{{plan.tuesData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.wedsUrl}}' target="_blank">{{plan.wedData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.thursUrl}}' target="_blank">{{plan.thursData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.friUrl}}' target="_blank">{{plan.friData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.satUrl}}' target="_blank">{{plan.satData | number:2}}</a></td>
+                    <td ><a ng-href='{{plan.sunUrl}}' target="_blank">{{plan.sunData | number:2}}</a></td>
+                </tr>
+                <tr>                 
+                    <td><img ng-src="{{plan.monday && (plan.monMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.tuesday && (plan.tuesMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.wednesday && (plan.wedsMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.thursday && (plan.thursMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.friday && (plan.friMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.saturday && (plan.satMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.sunday && (plan.sunMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
                 </tr>
                 <tr>
-
-                    
-                    <td><img ng-src="{{plan.monday && (plan.monUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.tuesday && (plan.tuesUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.wednesday && (plan.wedsUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.thursday && (plan.thursUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.friday && (plan.friUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.saturday && (plan.satUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.sunday && (plan.sunUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-<!--
-                    <td><iframe ng-src="{{plan.monUrl}}" width="400" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe ng-src="{{plan.monUrl}" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe src="{{trustSrc(plan.monUrl)}l" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
-                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
- <p>Your browser does not support iframes.</p>
-</iframe></td>
--->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </table>
             <hr>

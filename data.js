@@ -99,4 +99,52 @@ var runs = [{
         map: 'assets/7_millvalley.png',
         url: 'https://www.strava.com/activities/364524117',
         city: 'Mill Valley'
+    },
+    {
+        distance: 1.0,
+        map: 'assets/1_homestead.png',
+        url: 'https://www.strava.com/activities/353339636',
+        city: "Mill Valley"
+    },
+    {
+        distance: 8.4,
+        map: 'assets/8_5_mttam.png',
+        url: 'https://www.strava.com/activities/356954755',
+        city: 'Mill Valley'
+    },
+    {
+        distance: 3.0,
+        map: 'assets/3_homestead.png',
+        url: 'https://www.strava.com/activities/302063565',
+        city: 'Mill Valley'
+    },
+    {
+        distance: 6.8,
+        map: 'assets/7_dipsea.png',
+        url: 'https://www.strava.com/activities/325657636',
+        city: 'Mill Valley'
+    },
+    {
+        distance: 14.5,
+        map: 'assets/14_5_sausalito.png',
+        url: 'https://www.strava.com/activities/353339775',
+        city: 'Mill Valley'
+    },
+    { 
+        distance: 17.0,
+        map: 'assets/17_stinson.png',
+        url: 'https://www.strava.com/activities/415707165',
+        city: 'Mill Valley'
+    },
+    {
+        distance: 16.0,
+        map: 'assets/16_mttam.png',
+        url: 'https://www.strava.com/activities/415802940',
+        city: 'Mill Valley'
+    },
+    {
+        distance: 18.0,
+        map: 'assets/18_millvalley.png',
+        url: 'https://www.strava.com/activities/414881449',
+        city: 'Mill Valley'
     }];

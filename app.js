@@ -46,13 +46,20 @@ app.controller('indexCtrl', ['$scope', '$sce', function($scope, $sce){
             $scope.plan.thursData = $scope.plan.thursday ? weekMiles : 0;
             $scope.plan.friData = $scope.plan.friday ? weekMiles : 0;
             
-            $scope.plan.satUrl = findRun($scope.plan.satData)[0].map;
-            $scope.plan.sunUrl = findRun($scope.plan.sunData)[0].map;
-            $scope.plan.monUrl = $scope.plan.monday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.thursUrl = $scope.plan.thursday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.friUrl = $scope.plan.friday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.satMap = findRun($scope.plan.satData)[0].map;
+            $scope.plan.satUrl = findRun($scope.plan.satData)[0].url;
+            $scope.plan.sunMap = findRun($scope.plan.sunData)[0].map;
+            $scope.plan.sunUrl = findRun($scope.plan.sunData)[0].url;
+            $scope.plan.monMap = $scope.plan.monday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.monUrl = $scope.plan.monday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.tuesMap = $scope.plan.tuesday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.wedsMap = $scope.plan.wednesday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.thursMap = $scope.plan.thursday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.thursUrl = $scope.plan.thursday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.friMap = $scope.plan.friday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.friUrl = $scope.plan.friday ? findRun(weekMiles)[0].url : null;
             
         }else if(($scope.plan.saturday || $scope.plan.sunday) && ($scope.plan.days > 3)){
             weekendMiles = $scope.plan.miles * .30;
@@ -65,13 +72,20 @@ app.controller('indexCtrl', ['$scope', '$sce', function($scope, $sce){
             $scope.plan.satData = $scope.plan.saturday ? weekendMiles : 0;
             $scope.plan.sunData = $scope.plan.sunday ? weekendMiles : 0;
             
-            $scope.plan.satUrl = $scope.plan.saturday ? findRun(weekendMiles)[0].map : null;
-            $scope.plan.sunUrl = $scope.plan.sunday ? findRun(weekendMiles)[0].map : null;
-            $scope.plan.monUrl = $scope.plan.monday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.thursUrl = $scope.plan.thursday ? findRun(weekMiles)[0].map : null;
-            $scope.plan.friUrl = $scope.plan.friday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.satMap = $scope.plan.saturday ? findRun(weekendMiles)[0].map : null;
+            $scope.plan.satUrl = $scope.plan.saturday ? findRun(weekendMiles)[0].url : null;
+            $scope.plan.sunMap = $scope.plan.sunday ? findRun(weekendMiles)[0].map : null;
+            $scope.plan.sunUrl = $scope.plan.sunday ? findRun(weekendMiles)[0].url : null;
+            $scope.plan.monMap = $scope.plan.monday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.monUrl = $scope.plan.monday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.tuesMap = $scope.plan.tuesday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.wedsMap = $scope.plan.wednesday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.thursMap = $scope.plan.thursday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.thursUrl = $scope.plan.thursday ? findRun(weekMiles)[0].url : null;
+            $scope.plan.friMap = $scope.plan.friday ? findRun(weekMiles)[0].map : null;
+            $scope.plan.friUrl = $scope.plan.friday ? findRun(weekMiles)[0].url : null;
         }else{
             $scope.plan.total =  $scope.plan.miles / $scope.plan.days;
             $scope.plan.monData = $scope.plan.monday ? $scope.plan.total : 0;
@@ -82,13 +96,20 @@ app.controller('indexCtrl', ['$scope', '$sce', function($scope, $sce){
             $scope.plan.satData = $scope.plan.saturday ? $scope.plan.total : 0;
             $scope.plan.sunData = $scope.plan.sunday ? $scope.plan.total : 0;
             
-            $scope.plan.satUrl = $scope.plan.saturday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.sunUrl = $scope.plan.sunday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.monUrl = $scope.plan.monday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.thursUrl = $scope.plan.thursday ? findRun($scope.plan.total)[0].map : null;
-            $scope.plan.friUrl = $scope.plan.friday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.satMap = $scope.plan.saturday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.satUrl = $scope.plan.saturday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.sunMap = $scope.plan.sunday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.sunUrl = $scope.plan.sunday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.monMap = $scope.plan.monday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.monUrl = $scope.plan.monday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.tuesMap = $scope.plan.tuesday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.tuesUrl = $scope.plan.tuesday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.wedsMap = $scope.plan.wednesday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.wedsUrl = $scope.plan.wednesday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.thursMap = $scope.plan.thursday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.thursUrl = $scope.plan.thursday ? findRun($scope.plan.total)[0].url : null;
+            $scope.plan.friMap = $scope.plan.friday ? findRun($scope.plan.total)[0].map : null;
+            $scope.plan.friUrl = $scope.plan.friday ? findRun($scope.plan.total)[0].url : null;
         }
         
         
