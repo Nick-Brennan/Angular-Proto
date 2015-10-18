@@ -8,6 +8,7 @@
         <script src="node_modules/angular-route/angular-route.js"></script>
         <script src="node_modules/angular-resource/angular-resource.js"></script>
         <script src="app.js"></script>
+        <script src="data.js"></script>
     </head>
     <body>
         <div class="container">
@@ -85,13 +86,13 @@
                 <tr>
 
                     
-                    <td><img ng-src="{{plan.monday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.tuesday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.wednesday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.thursday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.friday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.saturday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
-                    <td><img ng-src="{{plan.sunday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.monday && (plan.monUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.tuesday && (plan.tuesUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.wednesday && (plan.wedsUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.thursday && (plan.thursUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.friday && (plan.friUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.saturday && (plan.satUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.sunday && (plan.sunUrl || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
 <!--
                     <td><iframe ng-src="{{plan.monUrl}}" width="400" height="100">
  <p>Your browser does not support iframes.</p>
