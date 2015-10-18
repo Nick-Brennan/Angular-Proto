@@ -11,7 +11,11 @@
     </head>
     <body>
         <div class="container">
-            <hr>
+            <div class="page-header">
+                <h1>
+                    FASTER
+                </h1>
+            </div>
             <div ng-controller="indexCtrl">
                 <label>Weekly Mileage</label>
                 <input ng-model='plan.miles' type="number"><br><br>
@@ -51,11 +55,12 @@
                         <div class="col-md-3"></div>
                     </div>
                     <hr>
-                    <p>Average daily mileage:</p>
-                    <p ng-if="plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday > 0">{{plan.miles / (plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday) || ""}}</p>
+                    <p></p>
+                    <p>Average daily mileage: <span ng-if="plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday > 0">{{plan.miles / (plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday) | number:2}}</span></p>
             
-                    <a ng-click="calcTotal()">Get Plan</a>
-            
+                    <a ng-click="calcTotal()" class="btn btn-default btn-sm">Get Plan</a><br><br>
+   
+           
             <table class="table">
                 <theader>
                     <tr id="days">
@@ -112,7 +117,7 @@
 -->
                 </tr>
             </table>
-                
+            <hr>
             </div>
 
         </div>

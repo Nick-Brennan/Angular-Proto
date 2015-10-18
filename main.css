@@ -1,11 +1,14 @@
+html, body{
+    height: 100%;
+}
 body{
-    background-image: url('assets/runningSplash.jpg');
+    background-image: url('assets/trail_running.jpg');
     background-size: cover;
 }
 
 img{
-    width: 125px;
-    height: 125px;
+    width: 110px;
+    height: 110px;
 }
 
 td, th{
@@ -28,9 +31,9 @@ p{
     text-shadow: 1px 1px 1px #002914; 
 }
 
-a{
-    color: white;
-    text-shadow: 1px 1px 1px #002914; 
+.btn-default{
+    color: dimgray;
+    font-weight: bolder;
 }
 
 #days{
@@ -40,4 +43,13 @@ a{
 #boxes{
     text-align: center;
     background-color: rgba(5, 4, 4, 0.2);
+}
+h1{
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #002914; 
+}
+.container{
+    background-color: rgba(5, 4, 4, 0.5);
+    height: 100%;
+    
 }

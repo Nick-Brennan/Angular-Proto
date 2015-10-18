@@ -54,3 +54,9 @@ app.controller('indexCtrl', ['$scope', '$sce', function($scope, $sce){
         }
     };
 }]);
+
+app.filter("distance", function(){
+    return function(input){
+        return input + " miles";
+    };
+});
