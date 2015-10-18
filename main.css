@@ -1,0 +1,43 @@
+body{
+    background-image: url('assets/runningSplash.jpg');
+    background-size: cover;
+}
+
+img{
+    width: 125px;
+    height: 125px;
+}
+
+td, th{
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #002914; 
+}
+
+.boxes{
+    margin: auto;
+}
+
+label{
+    color:white;
+    text-shadow: 1px 1px 1px #002914; 
+}
+
+p{
+    color: white;
+    text-shadow: 1px 1px 1px #002914; 
+}
+
+a{
+    color: white;
+    text-shadow: 1px 1px 1px #002914; 
+}
+
+#days{
+    background-color: rgba(5, 4, 4, 0.49);
+}
+
+#boxes{
+    text-align: center;
+    background-color: rgba(5, 4, 4, 0.2);
+}

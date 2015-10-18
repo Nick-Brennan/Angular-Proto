@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html ng-app='appProto'>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="main.css" type="text/css" rel="stylesheet">
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <hr>
+            <div ng-controller="indexCtrl">
+                <label>Weekly Mileage</label>
+                <input ng-model='plan.miles' type="number"><br><br>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                        <div id="boxes" class="col-md-6">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.monday" value="1" class="checkbox">
+                                Mon
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.tuesday" value="1" class="checkbox">
+                                Tues
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.wednesday" value="1" class="checkbox">
+                                Wed
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.thursday" value="1" class="checkbox">
+                                Thurs
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.friday" value="1" class="checkbox">
+                                Fri
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.saturday" value="1" class="checkbox">
+                                Sat
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" ng-model="plan.sunday" value="1" class="checkbox">
+                                Sun
+                            </label>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <hr>
+                    <p>Average daily mileage:</p>
+                    <p ng-if="plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday > 0">{{plan.miles / (plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday) || ""}}</p>
+            
+                    <a ng-click="calcTotal()">Get Plan</a>
+            
+            <table class="table">
+                <theader>
+                    <tr id="days">
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </theader>
+                <tr>
+                    <td >{{plan.monData | number:2}}</td>
+                    <td >{{plan.tuesData | number:2}}</td>
+                    <td >{{plan.wedData | number:2}}</td>
+                    <td >{{plan.thursData | number:2}}</td>
+                    <td >{{plan.friData | number:2}}</td>
+                    <td >{{plan.satData | number:2}}</td>
+                    <td >{{plan.sunData | number:2}}</td>
+                </tr>
+                <tr>
+
+                    
+                    <td><img ng-src="{{plan.monday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.tuesday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.wednesday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.thursday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.friday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.saturday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+                    <td><img ng-src="{{plan.sunday && 'assets/14_TennesseeValley.png' || 'assets/rest.jpg'}}"></td>
+<!--
+                    <td><iframe ng-src="{{plan.monUrl}}" width="400" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe ng-src="{{plan.monUrl}" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe src="{{trustSrc(plan.monUrl)}l" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+                    <td><iframe src="{{plan.monUrl}" width="100" height="100">
+ <p>Your browser does not support iframes.</p>
+</iframe></td>
+-->
+                </tr>
+            </table>
+                
+            </div>
+
+        </div>
+    </body>
+</html>
