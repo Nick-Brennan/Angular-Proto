@@ -3,7 +3,10 @@
     <head>
         <meta charset="utf-8">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.min.css">
         <link href="main.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="node_modules/angular/angular.js"></script>
         <script src="node_modules/angular-route/angular-route.js"></script>
         <script src="node_modules/angular-resource/angular-resource.js"></script>
@@ -11,55 +14,78 @@
         <script src="data.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="page-header">
-                <h1>
-                    FASTER
-                </h1>
+        <div class="row nav">
+            <div class="col-sm-8">
+                <h1 class="title">ÖVA</h1>
+                
             </div>
-            <div ng-controller="indexCtrl">
+            <div class="col-sm-2">
+                <small class="pull-right" id="greeting">Welcome, Guest</small> 
+            </div>    
+            <div class="col-sm-1">
+                <img src="assets/runningSplash.jpg" id="profile_pic">&nbsp
+            </div>
+                <div class="navbar-header col-sm-1">
+                <div class="dropdown">
+                    <button class="dropdown-toggle burger" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img alt="menu" src="assets/menu-3-256.png" id="sando"class="pull-right">
+                    </button>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1" id="indexDrop">
+                        <li><a href="">update best efforts<small> (demo no)</small></a></li>
+                        
+                        <li><a href="#">save plan<small> (demo no)</small></a></li>                   
+                        <li><a href="#">view plans<small> (demo no)</small></a></li>
+                           <li><button class="btn btn-xs btn-danger"><a href="http://nickbrennandev.com">logout</a></button></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>    
+            <div class="container" ng-controller="indexCtrl">
+            <br>
                 <label>Weekly Mileage</label>
                 <input ng-model='plan.miles' type="number"><br><br>
                 <hr>
                 <div class="row">
+                
                     <div class="col-md-3"></div>
                         <div id="boxes" class="col-md-6">
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.monday" value="1" class="checkbox">
-                                Mon
+                                Mon&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.tuesday" value="1" class="checkbox">
-                                Tues
+                                Tues&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.wednesday" value="1" class="checkbox">
-                                Wed
+                                Wed&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.thursday" value="1" class="checkbox">
-                                Thurs
+                                Thurs&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.friday" value="1" class="checkbox">
-                                Fri
+                                Fri&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.saturday" value="1" class="checkbox">
-                                Sat
+                                Sat&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                             <label class="checkbox-inline">
                                 <input type="checkbox" ng-model="plan.sunday" value="1" class="checkbox">
-                                Sun
+                                Sun&nbsp&nbsp&nbsp&nbsp&nbsp
                             </label>
                         </div>
+
                         <div class="col-md-3"></div>
                     </div>
                     <hr>
                     <p></p>
                     <p>Average daily mileage: <span ng-if="plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday > 0">{{plan.miles / (plan.monday + plan.tuesday + plan.wednesday + plan.thursday + plan.friday + plan.saturday + plan.sunday) | number:2}}</span></p>
             
-                    <a ng-click="calcTotal()" class="btn btn-default btn-sm">Get Plan</a><br><br>
+                    <a ng-click="calcTotal()" class="btn btn-default btn-sm btn-raised">Get Plan</a><br><br>
    
            
             <table class="table">
@@ -84,13 +110,13 @@
                     <td ><a ng-href='{{plan.sunUrl}}' target="_blank">{{plan.sunData | number:2}}</a></td>
                 </tr>
                 <tr>                 
-                    <td><img ng-src="{{plan.monday && (plan.monMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.tuesday && (plan.tuesMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.wednesday && (plan.wedsMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.thursday && (plan.thursMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.friday && (plan.friMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.saturday && (plan.satMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
-                    <td><img ng-src="{{plan.sunday && (plan.sunMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}"></td>
+                    <td><img ng-src="{{plan.monday && (plan.monMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.tuesday && (plan.tuesMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.wednesday && (plan.wedsMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.thursday && (plan.thursMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.friday && (plan.friMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.saturday && (plan.satMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.sunday && (plan.sunMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -106,5 +132,6 @@
             </div>
 
         </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     </body>
 </html>

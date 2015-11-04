@@ -1,74 +1,85 @@
-html, body{
-    height: 100%;
-}
-body{
-    background-image: url('assets/trail_running.jpg');
-    background-size: cover;
+
+.title{
+    color: black;
+    font-size: 4.5em;
+    margin-top: 45px;
+    margin-left: 50px;
+    cursor: pointer;
+    display: inline-block;
 }
 
-img{
-    width: 110px;
-    height: 110px;
-}
+ img{
+    display: inline-block;
+    vertical-align: top;
+ }
 
-td, th{
+ #profile_pic{
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+    border-radius: 20px;
+ }
+
+ .day{
+    height: 125px;
+    width: 125px;
+ }
+
+ #boxes{
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px #002914; 
-}
+ }
 
-.boxes{
+ th{
+    text-align: center;
     margin: auto;
+ }
+
+ .nav{
+    background-color: rgba(151, 144, 144, 0.54);
+ }
+
+ .burger{   
+    vertical-align: bottom;
+    margin-top: 82px;
+    background-color: inherit;  
+ }
+
+ #sando{
+    height:30px;
+    border-radius: 20px;
+ }
+
+ #link_to_strava{
+    margin-top: 18%;
+ }
+
+ #dropdownMenu1{
+    border: none;
+ }
+
+ .btn-danger{
+    margin: 10px;
+    margin-left: 30px;
+ }
+
+ #indexDrop{
+    margin-top: 18px;
+ }
+
+#greeting{
+    margin-top: 100px;
+    vertical-align: bottom;
 }
 
-label{
-    color:white;
-    text-shadow: 1px 1px 1px #002914; 
-}
-
-p{
-    color: white;
-    text-shadow: 1px 1px 1px #002914; 
-}
-
-.btn-default{
-    color: dimgray;
-    font-weight: bolder;
-}
-
-#days{
-    background-color: rgba(5, 4, 4, 0.49);
-}
-
-#boxes{
+#mileSign{
     text-align: center;
-    background-color: rgba(5, 4, 4, 0.2);
-}
-h1{
-    font-weight: bolder;
-    text-shadow: 1px 1px 1px #002914; 
-}
-.container{
-    background-color: rgba(5, 4, 4, 0.5);
-    height: 100%;   
-}
-a{
-    color:white;
-}
-a:link {
-    text-decoration: none;
+    vertical-align: top;
 }
 
-a:visited {
-    color: white;
-    text-decoration: none;
+#planList{
+    text-align: center;
 }
 
-a:hover {
-    color: darkgrey;
-    text-decoration: none;
-}
-
-a:active {
-    text-decoration: underline;
+li.list-group-item{
+    border:none;
 }
