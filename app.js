@@ -20,7 +20,7 @@ app.controller('indexCtrl', ['$scope', '$sce', function($scope, $sce){
         var findRun = function(dist){
             var res = [];
             $scope.plan.runs.forEach(function(run){
-                if(run.distance >= (dist - 0.5) && run.distance <= (dist + 0.5)){
+                if(run.distance >= (dist - 0.65) && run.distance <= (dist + 0.65)){
                     res.push(run);
                 }
             });
