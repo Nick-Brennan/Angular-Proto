@@ -110,13 +110,13 @@
                     <td ><a ng-href='{{plan.sunUrl}}' target="_blank">{{plan.sunData | number:2}}</a></td>
                 </tr>
                 <tr>                 
-                    <td><img ng-src="{{plan.monday && (plan.monMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.tuesday && (plan.tuesMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.wednesday && (plan.wedsMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.thursday && (plan.thursMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.friday && (plan.friMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.saturday && (plan.satMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
-                    <td><img ng-src="{{plan.sunday && (plan.sunMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" class="day"></td>
+                    <td><img ng-src="{{plan.monday && (plan.monMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.tuesday && (plan.tuesMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.wednesday && (plan.wedsMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.thursday && (plan.thursMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.friday && (plan.friMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.saturday && (plan.satMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
+                    <td><img ng-src="{{plan.sunday && (plan.sunMap || 'assets/runDay.png') || 'assets/chillDay.jpg'}}" onerror="this.src='assets/trail_running.jpg'" class="day"></td>
                 </tr>
                 <tr>
                     <td></td>
