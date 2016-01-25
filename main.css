@@ -83,3 +83,6 @@
 li.list-group-item{
     border:none;
 }
+tr{
+    text-align: center;
+}
